@@ -29,7 +29,7 @@ cols = [0, 10, 20]
 pixels = image[rows,cols,:]
 print("Selected pixels (RGB):")
 for i,p in enumerate(pixels):
-    print(f"pixel {i + 1} at rows ({rows[i]}, {cols[i]}: {p})")
+    print(f"Pixel {i + 1} at ({rows[i]}, {cols[i]}): {p}")
 
 patch = image[0:10,0:10, :]
 print("\nPatch shape:", patch.shape)
@@ -37,10 +37,10 @@ print("\nPatch shape:", patch.shape)
 mean_color = patch.mean(axis=(0,1))
 print("Mean color of patch (RGB):", mean_color.astype(int))
 
-mean_rows = patch.mean(axis=1)
+mean_rows = patch.image(axis=1)
 print("Mean color per row (shape):", mean_rows.shape)
 
-mean_cols = patch.mean(axis=0)
+mean_cols = patch.image(axis=0)
 print("Mean color per column (shape):", mean_cols.shape)
 
 gray_patch = patch.mean(axis=2)
