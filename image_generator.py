@@ -37,6 +37,17 @@ print("\nPatch shape:", patch.shape)
 mean_color = patch.mean(axis=(0,1))
 print("Mean color of patch (RGB):", mean_color.astype(int))
 
+mean_rows = patch.mean(axis=1)
+print("Mean color per row (shape):", mean_rows.shape)
+
+mean_cols = patch.mean(axis=0)
+print("Mean color per column (shape):", mean_cols.shape)
+
+gray_patch = patch.mean(axis=2)
+print("Gray patch shape:", gray_patch.shape)
+
+
+
 # pixel = image[10,20,0]
 # print("Pixel value:", pixel)
 
